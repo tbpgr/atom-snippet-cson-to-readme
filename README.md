@@ -49,6 +49,7 @@ if (${1:condition})
 else
 	$3
 end
+~~~
 ```
 
 [atom-snippet-cson-to-readme-url]: https://github.com/tbpgr/atom-snippet-cson-to-readme
