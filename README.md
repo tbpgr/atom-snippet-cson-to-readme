@@ -35,8 +35,14 @@ $ cson2readme <filepath>
 * .source.ruby
 
 ## Snippets
-|name|prefix|body|
-|:--|:--|:--|
-|if … else … end|if else|if (${1:condition})\n\t$2\nelse\n\t$3\nend|
-|if … end|if|if (${1:condition})\n\t$0\nend|
+### if … else … end
+prefix: if else  
+body:
+
+~~~
+if (${1:condition})
+	$2
+else
+	$3
+end
 ```
