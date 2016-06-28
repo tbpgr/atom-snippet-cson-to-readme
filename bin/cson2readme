@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+'use strict';
+
+var snippetCsonPath =  process.argv[2];
+if (!snippetCsonPath) {
+  process.stderr.write('snippet path is required\n');
+  process.exit(1);
+}
+var fs = require('fs');
+var exists = fs.existsSync(snippetCsonPath);
+if (!exists) {
+  process.stderr.write(snippetCsonPath + ' is not exist\n');
+  process.exit(1);
+}
+var cson = fs.readFileSync(snippetCsonPath, 'utf-8');
+var SnippetCsonToReadme = require('../lib/index.js');
+var cson2readme = new SnippetCsonToReadme(cson.replace( /\\/g , '\\\\' ));
+var table = cson2readme.run();
+process.stdout.write(table + '\n');
+process.exit(0);
