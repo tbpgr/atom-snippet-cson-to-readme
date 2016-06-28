@@ -1,6 +1,6 @@
 {
   "name": "atom-snippet-cson-to-readme",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generate Atom Package README from snippet.cson",
   "main": "index.js",
   "jsnext:main": "src/index.js",
